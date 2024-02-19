@@ -1,7 +1,7 @@
 # gh-helper
 
 This is a simple tool to assist with certain repetitive and verbose GitHub
-operations for my personal usage.
+operations.
 
 ```shell
 $ deno task run 
