@@ -4,3 +4,4 @@ export {
   Command,
   EnumType,
 } from "https://deno.land/x/cliffy@v1.0.0-rc.3/command/mod.ts";
+export * as yaml from "https://deno.land/std@0.215.0/yaml/mod.ts";

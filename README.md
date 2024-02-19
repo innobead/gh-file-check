@@ -4,23 +4,26 @@ This is a simple tool to check if a file exists in the repositories of the
 specified GitHub owners.
 
 ```shell
-># deno run -A main.ts -h
+$ deno task run 
+Task run deno run -A ./src/main.ts
 
-Usage:   gh-file-check --owner <owner> --path <path>
-Version: 0.1.0                                      
+Usage:   gh-helper
+Version: 0.1.0    
 
 Description:
 
-  Check if a file exists on the repos owned by GitHub owner(s)
+  GitHub helper
 
 Options:
 
-  -h, --help                   - Show this help.                                                                                   
-  -V, --version                - Show the version number for this program.                                                         
-  -o, --owner      <owner>     - GitHub owner                               (required)                                             
-  -p, --path       <path>      - File path to check                         (required)                                             
-  -l, --log-level  [logLevel]  - Log level                                  (Default: "CRITICAL", Values: "ERROR", "DEBUG", "INFO",
-                                                                            "WARN", "CRITICAL")                                    
+  -h, --help                   - Show this help.                                                                                    
+  -V, --version                - Show the version number for this program.                                                          
+  -l, --log-level  [logLevel]  - Log level                                  (Default: "CRITICAL", Values: "NOTSET", "DEBUG", "INFO",
+                                                                            "WARN", "ERROR", "CRITICAL")                            
+
+Commands:
+
+  file-check  - Check if a file exists on the repos owned by GitHub owner(s)
 
 Environment variables:
 
