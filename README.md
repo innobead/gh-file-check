@@ -1,7 +1,7 @@
-# gh-file-check
+# gh-helper
 
-This is a simple tool to check if a file exists in the repositories of the
-specified GitHub owners.
+This is a simple tool to assist with certain repetitive and verbose GitHub
+operations for my personal usage.
 
 ```shell
 $ deno task run 

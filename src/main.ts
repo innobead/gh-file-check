@@ -12,7 +12,7 @@ async function main() {
   const mainCmd = new Command()
     .name("gh-helper")
     .version("0.1.0")
-    .description("GitHub helper")
+    .description("Assist with certain repetitive and verbose GitHub operations")
     .globalType("log_level", logLevelType)
     .option("-l, --log-level [logLevel:log_level]", "Log level", {
       default: log.getLevelName(log.LogLevels.CRITICAL),
