@@ -1,14 +1,6 @@
-import { EnumType } from "https://deno.land/x/cliffy@v1.0.0-rc.3/command/mod.ts";
-import { Command, log, Octokit } from "./deps.ts";
-import { LevelName } from "https://deno.land/std@0.215.0/log/levels.ts";
+import { Command, EnumType, log, Octokit } from "./deps.ts";
 
-const logLevelType = new EnumType([
-  "ERROR",
-  "DEBUG",
-  "INFO",
-  "WARN",
-  "CRITICAL",
-]);
+const logLevelType = new EnumType(log.LogLevelNames);
 
 if (import.meta.main) {
   await main();
@@ -28,7 +20,7 @@ async function main() {
       required: true,
     })
     .option("-l, --log-level [logLevel:log_level]", "Log level", {
-      default: "CRITICAL",
+      default: log.getLevelName(log.LogLevels.CRITICAL),
     })
     .env("GITHUB_TOKEN=<value:string>", "GitHub token", {
       required: true,
@@ -38,7 +30,7 @@ async function main() {
 
   log.setup({
     handlers: {
-      console: new log.ConsoleHandler(options.logLevel as LevelName),
+      console: new log.ConsoleHandler(options.logLevel as log.LevelName),
     },
     loggers: {
       default: {

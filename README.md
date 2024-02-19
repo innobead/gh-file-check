@@ -1,6 +1,7 @@
 # gh-file-check
 
-This is a simple tool to check if a file exists in the repositories of the specified GitHub owners. 
+This is a simple tool to check if a file exists in the repositories of the
+specified GitHub owners.
 
 ```shell
 ># deno run -A main.ts -h
@@ -24,5 +25,4 @@ Options:
 Environment variables:
 
   GITHUB_TOKEN  <value>  - GitHub token  (required)
-
 ```
